@@ -1,0 +1,22 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "deploy": {
+    "startCommand": "node livehub-news-monitor.js",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 3
+  }
+}
+```
+
+Push both changes, then Railway will:
+- ✅ **Build step** → runs `echo 'No build needed'` (instant, no hang)
+- ✅ **Deploy step** → runs `node livehub-news-monitor.js` (your actual server)
+
+The logs should then show something like:
+```
+▸ build
+$ echo 'No build needed'
+No build needed
+▸ deploy
+$ npm run start
+Server listening on 0.0.0.0:PORT
