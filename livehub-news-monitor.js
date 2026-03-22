@@ -20,7 +20,7 @@ const https  = require('https');
 const http   = require('http');
 const { exec } = require('child_process');
 
-const PORT            = 3027;
+const PORT            = 8080;
 const REFRESH_MINS    = 30;
 const FETCH_TIMEOUT   = 12000;  // ms per channel fetch
 
