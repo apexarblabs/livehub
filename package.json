@@ -2,6 +2,7 @@
   "name": "livehub",
   "version": "5.2.0",
   "scripts": {
+    "build": "echo 'No build needed'",
     "start": "node livehub-news-monitor.js"
   },
   "engines": {
