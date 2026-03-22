@@ -20,7 +20,7 @@ const https  = require('https');
 const http   = require('http');
 const { exec } = require('child_process');
 
-const PORT            = 8080;
+const PORT = process.env.PORT || 3025;
 const REFRESH_MINS    = 30;
 const FETCH_TIMEOUT   = 12000;  // ms per channel fetch
 
@@ -619,7 +619,7 @@ async function main() {
     res.end(buildHTML());
   });
 
-  server.listen(PORT, '127.0.0.1', () => {
+server.listen(PORT, '0.0.0.0', () => {
     const url = `http://localhost:${PORT}`;
     const found = CHANNELS.filter(ch => liveIds[ch.handle]).length;
     console.log('\n╔════════════════════════════════════════════════════╗');
