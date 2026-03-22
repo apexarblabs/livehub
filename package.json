@@ -1,0 +1,10 @@
+{
+  "name": "livehub",
+  "version": "5.2.0",
+  "scripts": {
+    "start": "node livehub-news-monitor.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
